@@ -1,40 +1,54 @@
-# 🎙️ VoiceBridge — Telugu Speech to Text & Text to Speech
+# VoiceBridge 🎙️🌉
+### Bridging Languages Through AI-Powered Speech Technology
 
-VoiceBridge is a Python-based speech application built with Streamlit that helps users convert Telugu speech into text and transform written text back into speech. Powered by Gnani AI's Prisma Speech-to-Text (STT) and Timbre Text-to-Speech (TTS), it provides a simple and accessible way to work with spoken language.
+**VoiceBridge** is an AI-powered speech application built with Python and Streamlit. It helps users transform spoken language into text, translate the transcript into English, and generate natural-sounding speech using AI-powered speech technologies.
 
-## ✨ Features
+🌐 **Live Application:** https://voicebridgegit-3pd58xjb2by3zndtw6psut.streamlit.app/
 
-- 🎧 **Speech-to-Text:** Transcribe uploaded Telugu audio into text.
-- ✍️ **Editable Transcription:** Review and edit the generated transcript.
-- 🔊 **Text-to-Speech:** Generate speech audio from written or edited text.
-- ▶️ **Audio Playback:** Listen to generated speech directly in the app.
-- 📥 **Audio Download:** Download generated speech for later use.
-- 🌐 **Web Interface:** Simple, interactive interface powered by Streamlit.
-- 🔐 **API Key Protection:** Keep API credentials in environment variables rather than hardcoding them in the source code.
+---
 
-## 🛠️ Tech Stack
+## 🚀 Features
 
-- **Python** — Application logic
-- **Streamlit** — Web interface
-- **Gnani AI Prisma** — Speech-to-Text
-- **Gnani AI Timbre** — Text-to-Speech
-- **Git & GitHub** — Version control and project hosting
+- 🎤 **Audio Input:** Provide speech through the application's audio input workflow.
+- 📝 **Speech-to-Text:** Convert spoken audio into written text using Gnani AI Prisma STT.
+- 🌍 **Language Translation:** Translate recognized text into English using Google Translator.
+- 🗣️ **AI Text-to-Speech:** Generate speech from text using Gnani AI Timbre TTS.
+- ✏️ **Editable Transcript:** Review and edit recognized text before generating speech.
+- 🔊 **Audio Playback:** Listen to the generated speech directly in the application.
+- 📥 **WAV Download:** Download generated audio for offline use.
+- 🌐 **Web-Based Interface:** Access the application online without installing it locally.
 
-## 🚀 Getting Started
+## 🛠️ Technology Stack
 
-### Prerequisites
+| Technology | Purpose |
+|---|---|
+| Python | Core application logic |
+| Streamlit | Interactive web interface |
+| Gnani AI Prisma STT | Speech recognition |
+| Gnani AI Timbre TTS | Speech generation |
+| Google Translator (`deep-translator`) | Text translation |
+| Requests | API communication |
+| Python-dotenv | Environment variable management |
 
-- Python 3.10 or a compatible version supported by your dependencies
-- A Gnani AI API key with access to the required speech services
-- Git (optional, for cloning the repository)
+## ⚙️ How It Works
+
+1. **Input Speech:** Provide an audio recording through the application.
+2. **Transcription:** The speech recognition service converts the audio into text.
+3. **Translation:** Translate the recognized text into English.
+4. **Text Editing:** Review and modify the transcript if necessary.
+5. **Speech Generation:** Generate spoken audio from the text using Timbre TTS.
+6. **Playback and Download:** Listen to the generated audio and download the WAV file.
+
+## 💻 Run Locally
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/shaik-fouzan/VoiceBridge.git
-cd VoiceBridge
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd voicebridge
 ```
 
+Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub repository URL.
 
 ### 2. Create a virtual environment
 
@@ -44,8 +58,8 @@ python -m venv .venv
 
 Activate it on Windows:
 
-```bash
-.venv\Scripts\activate
+```powershell
+.venv\Scripts\Activate.ps1
 ```
 
 ### 3. Install dependencies
@@ -56,17 +70,26 @@ pip install -r requirements.txt
 
 ### 4. Configure your API key
 
-Create a `.env` file in the project root and add your Gnani AI API key using the environment variable name expected by `app.py`.
-
-Example:
+Create a `.env` file in the project root directory:
 
 ```env
-GNANI_API_KEY=your_api_key_here
+GNANI_API_KEY=your_gnani_api_key_here
 ```
 
-Replace `your_api_key_here` with your actual API key. Never commit your `.env` file or publish your API key on GitHub.
+Replace the placeholder with your actual Gnani AI API key.
 
-### 5. Run the application
+**Security note:** Never commit your `.env` file or expose your API key in your source code, screenshots, or public repository.
+
+Ensure your `.gitignore` includes:
+
+```gitignore
+.env
+.venv/
+__pycache__/
+*.py[cod]
+```
+
+### 5. Launch the application
 
 ```bash
 streamlit run app.py
@@ -74,42 +97,53 @@ streamlit run app.py
 
 Streamlit will provide a local URL that you can open in your browser.
 
-## 📖 How to Use
+## 🔑 API Configuration
 
-1. Open VoiceBridge in your browser.
-2. Upload a short Telugu audio sample.
-3. Generate a speech transcription.
-4. Review and edit the transcript if needed.
-5. Convert the text into speech.
-6. Play and download the generated audio.
+VoiceBridge uses Gnani AI services for speech recognition and speech generation. A valid API key and access to the required services are needed to run the application locally.
 
-## 🌐 Live Demo
+Keep your API credentials private and configure them using environment variables. For deployment, add secrets through your hosting platform's secure configuration settings.
 
-## 🎯 Project Goal
+## 🧪 Testing
 
-VoiceBridge aims to make speech and text conversion easier through a straightforward interface, helping users interact with Telugu audio and written content more conveniently.
+The deployed application has been tested successfully for the following core workflows:
 
-## 🔒 Security
+- Application startup and accessibility
+- Audio input
+- Hindi speech transcription
+- English translation
+- Timbre speech generation
+- WAV audio download
 
-- Keep API keys private.
-- Store secrets in environment variables or the hosting platform's secret manager.
-- Never commit `.env`, credentials, or private configuration files.
-- If an API key is accidentally exposed, revoke it and generate a replacement.
+## 🎯 Project Objective
 
-## 🌍 Deployment
+VoiceBridge aims to make speech-based communication more accessible by combining speech recognition, language translation, and speech synthesis in a single, easy-to-use interface.
 
-VoiceBridge can be deployed to a compatible hosting platform that supports Streamlit and the required Python dependencies. Configure the necessary API key through the platform's secrets or environment-variable settings before launching the application.
+The project demonstrates how AI APIs and Python web technologies can be integrated into a practical application that converts spoken input into translated text and generated speech.
 
-## 🌐 Live Demo
+## 🔮 Future Improvements
 
-🚀 **Try VoiceBridge online:** [Open VoiceBridge](https://voicebridgegit-3pd58xjb2by3zndtw6psut.streamlit.app/)
+- Expand support for additional Indian and international languages.
+- Improve transcription accuracy for different accents and recording conditions.
+- Add more voice and speech-generation options.
+- Enhance error handling and audio-processing performance.
+- Introduce additional accessibility features.
 
-Explore Multi-Language speech-to-text transcription and text-to-speech generation directly in your browser without installing the application locally.
+## 🔒 Privacy and Security
+
+- API keys should be stored securely in environment variables or deployment secrets.
+- Never publish credentials or sensitive configuration files.
+- Avoid uploading confidential audio recordings or personal information.
 
 ## 👨‍💻 Author
 
-**Shaik Fouzan**
+**VoiceBridge — AI-Powered Speech and Translation Application**
 
-## 📄 License
+Built with Python, Streamlit, and Gnani AI speech technologies.
 
-Add a license if you intend to distribute or allow others to reuse this project. Until a license is added, standard copyright restrictions apply.
+## 🌐 Try VoiceBridge
+
+**Experience the live application here:**
+
+👉 https://voicebridgegit-3pd58xjb2by3zndtw6psut.streamlit.app/
+
+If you find this project interesting, consider giving the repository a ⭐ on GitHub.
