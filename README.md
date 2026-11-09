@@ -83,6 +83,8 @@ Streamlit will provide a local URL that you can open in your browser.
 5. Convert the text into speech.
 6. Play and download the generated audio.
 
+## 🌐 Live Demo
+
 ## 🎯 Project Goal
 
 VoiceBridge aims to make speech and text conversion easier through a straightforward interface, helping users interact with Telugu audio and written content more conveniently.
@@ -97,6 +99,12 @@ VoiceBridge aims to make speech and text conversion easier through a straightfor
 ## 🌍 Deployment
 
 VoiceBridge can be deployed to a compatible hosting platform that supports Streamlit and the required Python dependencies. Configure the necessary API key through the platform's secrets or environment-variable settings before launching the application.
+
+## 🌐 Live Demo
+
+🚀 **Try VoiceBridge online:** [Open VoiceBridge](https://voicebridgegit-3pd58xjb2by3zndtw6psut.streamlit.app/)
+
+Explore Multi-Language speech-to-text transcription and text-to-speech generation directly in your browser without installing the application locally.
 
 ## 👨‍💻 Author
 
